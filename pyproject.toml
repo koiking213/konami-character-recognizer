@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "konami-login"
+name = "konami-character-recognizer"
 version = "0.1.0"
 description = ""
 authors = ["koiking213 <koiking213@gmail.com>"]
 readme = "README.md"
-packages = [{include = "konami_login"}]
+packages = [{include = "konami-character-recognizer"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"

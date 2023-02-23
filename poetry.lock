@@ -203,7 +203,7 @@ python-versions = ">=3.8"
 
 [[package]]
 name = "opencv-contrib-python"
-version = "4.7.0.68"
+version = "4.7.0.72"
 description = "Wrapper package for OpenCV python bindings."
 category = "main"
 optional = false
@@ -214,6 +214,7 @@ numpy = [
     {version = ">=1.21.0", markers = "python_version <= \"3.9\" and platform_system == \"Darwin\" and platform_machine == \"arm64\""},
     {version = ">=1.21.2", markers = "python_version >= \"3.10\""},
     {version = ">=1.21.4", markers = "python_version >= \"3.10\" and platform_system == \"Darwin\""},
+    {version = ">=1.22.0", markers = "python_version >= \"3.11\""},
     {version = ">=1.19.3", markers = "python_version >= \"3.6\" and platform_system == \"Linux\" and platform_machine == \"aarch64\" or python_version >= \"3.9\""},
     {version = ">=1.17.0", markers = "python_version >= \"3.7\""},
     {version = ">=1.17.3", markers = "python_version >= \"3.8\""},
@@ -420,11 +421,11 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "tomli"
-version = "1.2.3"
+version = "2.0.1"
 description = "A lil' TOML parser"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [[package]]
 name = "tomlkit"
@@ -609,13 +610,13 @@ numpy = [
     {file = "numpy-1.24.2.tar.gz", hash = "sha256:003a9f530e880cb2cd177cba1af7220b9aa42def9c4afc2a2fc3ee6be7eb2b22"},
 ]
 opencv-contrib-python = [
-    {file = "opencv-contrib-python-4.7.0.68.tar.gz", hash = "sha256:2f0c32b0f2f55255632a44bdcfa185f88c7fb6d2616869942aff9d5a39df4997"},
-    {file = "opencv_contrib_python-4.7.0.68-cp37-abi3-macosx_10_13_x86_64.whl", hash = "sha256:2b8e3a1a7af31ebed28487d161ca4be0edd0b0e241667c6e9c842ac683313b2f"},
-    {file = "opencv_contrib_python-4.7.0.68-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:e3967b1f3d74b8c70be724dbc07921faec87e8806cc87b2db5e7057815d6a08c"},
-    {file = "opencv_contrib_python-4.7.0.68-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:35e9a3809da10a47189c06d4d78b8e7821b9a3578dec8cbddf6ee1675bd83557"},
-    {file = "opencv_contrib_python-4.7.0.68-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1a48c2f24440cfd6e49c84dbe39c39feff5efbc90be8299c76e7141973d403b6"},
-    {file = "opencv_contrib_python-4.7.0.68-cp37-abi3-win32.whl", hash = "sha256:b4033a164b2e2ea0049ba8c1194dab82dca680953ac36f33d1cc2c060906555f"},
-    {file = "opencv_contrib_python-4.7.0.68-cp37-abi3-win_amd64.whl", hash = "sha256:7a75f1775790106e54bcfb101c0e00e1f801a57d9baebc82d0b6758fc83a4ca0"},
+    {file = "opencv-contrib-python-4.7.0.72.tar.gz", hash = "sha256:ab33fa2385ec7e70b9d484293f6f1f3707933045af4d18bb3b0a0290fa44370f"},
+    {file = "opencv_contrib_python-4.7.0.72-cp37-abi3-macosx_10_16_x86_64.whl", hash = "sha256:698c6b6203831f6573e04258be197e3bfde97fb7279fb614e39d75a8bd5818fb"},
+    {file = "opencv_contrib_python-4.7.0.72-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:8cad628ea6cc493f6c56140d7edc86f7ed8de528e18e44311e42b390a7d9996e"},
+    {file = "opencv_contrib_python-4.7.0.72-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d1fef5ae16dfa73022749165e029e85eb0f399503470c0df1f84c95633f4ae52"},
+    {file = "opencv_contrib_python-4.7.0.72-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b54c2e8bb636e367d29bde48fae2aa52c43b782265cf65838a1fe852006cdd94"},
+    {file = "opencv_contrib_python-4.7.0.72-cp37-abi3-win32.whl", hash = "sha256:641ca83b34a9d3e8ef2da70533c6e4e3f076ffb0db69b963d82899cc53e9b3c2"},
+    {file = "opencv_contrib_python-4.7.0.72-cp37-abi3-win_amd64.whl", hash = "sha256:fefc5f7f1eef3125f78242afe5c989057b36c2f015619698c741b04f4503f913"},
 ]
 opencv-python = [
     {file = "opencv-python-4.7.0.72.tar.gz", hash = "sha256:3424794a711f33284581f3c1e4b071cfc827d02b99d6fd9a35391f517c453306"},
@@ -799,8 +800,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 tomli = [
-    {file = "tomli-1.2.3-py3-none-any.whl", hash = "sha256:e3069e4be3ead9668e21cb9b074cd948f7b3113fd9c8bba083f48247aab8b11c"},
-    {file = "tomli-1.2.3.tar.gz", hash = "sha256:05b6166bff487dc068d322585c7ea4ef78deed501cc124060e0f238e89a9231f"},
+    {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
+    {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
 tomlkit = [
     {file = "tomlkit-0.11.6-py3-none-any.whl", hash = "sha256:07de26b0d8cfc18f871aec595fda24d95b08fef89d147caa861939f37230bf4b"},
