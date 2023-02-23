@@ -1,4 +1,7 @@
+import base64
+
 import cv2
+import numpy as np
 
 
 def calc_hist(img: cv2.Mat) -> cv2.Mat:
@@ -24,3 +27,20 @@ def is_same_character(img_a: cv2.Mat, img_b: cv2.Mat) -> bool:
     hist_b = calc_hist(img_b)
     similarity = compare_hist(hist_a, hist_b)
     return similarity > 0.5
+
+
+def decode_image(img_base64: str) -> cv2.Mat:
+    np_data = np.frombuffer(base64.b64decode(img_base64), np.uint8)
+    return cv2.imdecode(np_data, cv2.IMREAD_UNCHANGED)
+
+
+def is_same_character_base64(img_a_base64: str, img_b_base64: str) -> bool:
+    img_a = decode_image(img_a_base64)
+    img_b = decode_image(img_b_base64)
+    return is_same_character(img_a, img_b)
+
+
+if __name__ == "__main__":
+    hist_a = calc_hist(cv2.imread("images/blue.png"))
+    hist_b = calc_hist(cv2.imread("images/blue2.png"))
+    print(compare_hist(hist_a, hist_b))

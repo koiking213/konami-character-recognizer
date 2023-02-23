@@ -17,6 +17,7 @@ flake8 = "4.0.1"
 isort = "5.10.1"
 mypy = "0.910"
 pytest = "^7.2.1"
+python-opencv-utils = "^0.0.4"
 
 
 [build-system]
