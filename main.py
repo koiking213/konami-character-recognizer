@@ -1,5 +1,5 @@
 import base64
-
+import json
 import cv2
 import numpy as np
 
@@ -38,6 +38,21 @@ def is_same_character_base64(img_a_base64: str, img_b_base64: str) -> bool:
     img_a = decode_image(img_a_base64)
     img_b = decode_image(img_b_base64)
     return is_same_character(img_a, img_b)
+
+
+def lambda_handler(event, context):
+    print(event)
+    body = json.loads(event['body'])
+    target_character_base64 = body['target']
+    images_base64 = body['images']
+    same_image_indices = []
+    for i, image_base64 in enumerate(images_base64):
+        if is_same_character_base64(target_character_base64, image_base64):
+            same_image_indices.append(i)
+    return {
+        'statusCode': 200,
+        'body': same_image_indices
+    }
 
 
 if __name__ == "__main__":
