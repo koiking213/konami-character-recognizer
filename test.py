@@ -1,7 +1,7 @@
 import base64
 import json
 import cv2
-from main import is_same_character, is_same_character_base64, lambda_hander
+from app import is_same_character, is_same_character_base64
 
 
 def test() -> None:
