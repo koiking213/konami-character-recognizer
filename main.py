@@ -19,15 +19,8 @@ def compare_hist(hist1: cv2.Mat, hist2: cv2.Mat) -> float:
     return similarity
 
 
-img_a = cv2.imread("a.png")
-hist_a = calc_hist(img_a)
-
-
-for image in ["b.png", "c.png", "d.png", "e.png", "f.png", "g.png"]:
-    print(image)
-    img_b = cv2.imread(image)
+def is_same_character(img_a: cv2.Mat, img_b: cv2.Mat) -> bool:
+    hist_a = calc_hist(img_a)
     hist_b = calc_hist(img_b)
-    # print(hist_b)
-
     similarity = compare_hist(hist_a, hist_b)
-    # print("Similarity: ", similarity)
+    return similarity > 0.5
